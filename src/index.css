@@ -1,13 +1,133 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.container {
+  margin: 0;
+  background-color: azure;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#room {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+#room.dark {
+  background-color: black;
+  color: white;
+}
+
+#room.light {
+  background-color: yellow;
+  color: black;
+}
+
+#lightbulb {
+  transition: all 0.3s;
+}
+
+#lightbulb.off {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#lightbulb.on {
+  visibility: visible;
+  opacity: 1;
+}
+
+#lightswitch {
+  cursor: pointer;
+}
+
+#time {
+  width: 100%;
+  text-align: center;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.main {
+  margin: 0;
+  text-align: center;
+  font-size: 4rem;
+}
+
+#calculator {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  background-color: mistyrose;
+}
+ul {
+  line-height: 1.2rem;
+  list-style: none;
+}
+input,
+select {
+  margin: 10px;
+}
+
+main {
+  text-align: center;
+}
+
+#current-date {
+  font-size: 30px;
+}
+
+#current-time {
+  font-size: 90px;
+}
+
+#current-zone {
+  font-size: 30px;
+}
+
+#search {
+  position: fixed;
+  top: 50px;
+  right: 10px;
+}
+
+#search-bar {
+  width: 300px;
+  padding: 5px;
+  font-size: 18px;
+  margin: 0;
+}
+
+#search-results {
+  list-style-type: none;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow: scroll;
+}
+
+#search-results li {
+  padding: 10px;
+}
+
+#search-results li:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.local-time {
+  float: right;
 }
